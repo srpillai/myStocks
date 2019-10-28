@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is Stock Market app that let's you look up stock quotes and financial information and save it to a database.
 
-Things you may want to cover:
+Uses Ruby on Rails with a database.
 
-* Ruby version
 
-* System dependencies
+## Built With:
 
-* Configuration
 
-* Database creation
+* Ruby version 2.6.3
+* Rails version 6.0
 
-* Database initialization
+* CSS & Bootstrap- for styling
+* Database sqlite3 version 1.3
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Author:
 
-* ...
+* Radhakrishnan Pillai - Initial work @ LaunchCode 2020
+
+## License:
+
+* This project is licensed under the MIT License
+
+## Acknowledgments:
+
+* Inspiration: LC 101 - LaunchCode @ Rockhurst University, Kansas City, MO.
