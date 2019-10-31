@@ -1,9 +1,31 @@
-<br></br>
-<h1>My Stock Portfolio</h1>
-<br></br>
-<p>My First stock portfolio app using Ruby on Rails</p>
-<br></br>
-<br></br>
-<p>Uses Rails version 6.0</p>
-<br></br>
-<p>Uses Ruby version 2.6.3</p>
+  <h2> My Stock Values  </h2>
+    </br> 
+    <p> Enter a stock symbol below to get details about the current trends <br/>
+    using IEX Cloud API.  </p>
+    </br>
+
+<%= form_tag root_path, :method => 'POST' do %>
+    <%= text_field_tag 'ticker', nil, placeholder: 
+        "Enter Ticker Symbol", size: 50 %>
+    <%= submit_tag 'Lookup' %>
+    <% end %>
+
+    </br> 
+
+    <% if @stock %>
+        <%= @stock.company_name  %> <br/>
+        Current Price $<%= @stock.latest_price  %> </br>
+        Previous Close $<%= @stock.previous_close  %> </br>
+        Change $<%= @stock.change  %> </br>  </br>
+        52 Week High $<%= @stock.week52_high  %> </br>
+        52 Week Low $<%= @stock.week52_low  %> </br> 
+        Market Cap $<%= number_to_human(@stock.market_cap) %> </br>
+        Price-to-earnings Ratio <%= @stock.pe_ratio  %> <br/> 
+        Previous Volume  <%= number_to_human(@stock.previous_volume)  %>
+    <% elsif @nothing %>
+        <%= @nothing %>
+    <% end %>
+
+
+
+

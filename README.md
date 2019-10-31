@@ -14,7 +14,14 @@ Uses Ruby on Rails with a database.
 * CSS & Bootstrap- for styling
 * Database sqlite3 version 1.3
 
+## Installing:
 
+
+* Clone or Download a copy from the Github: https://github.com/srpillai/myStocks.git
+* Go to the cloned or downloaded page in Terminal
+
+* Start the server by command in terminal "rails server"
+View in  tcp://localhost:3000
 
 ## Author:
 
