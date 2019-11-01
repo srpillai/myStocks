@@ -22,8 +22,8 @@ gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 
 gem 'jquery-rails'
 
+# Integrate IEX Cloud API 
 gem "stock_quote", '~> 3.0.0'
-
 
 
 # Reduces boot times through caching; required in config/boot.rb
