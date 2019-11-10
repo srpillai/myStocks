@@ -1,11 +1,35 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Ticker:</strong>
-  <%= @stock.ticker %>
-</p>
+      <% @ticker =  StockQuote::Stock.quote(@stock.ticker) %>
+
+        <% if !@ticker %>
+            The ticker:  <%= stock.ticker %> <br/> does not exist!
+
+        <% else %>
+            <div class="jumbotron">
+
+              <strong><%= @ticker.company_name %> </strong><br/>
+              Symbol: <%= @ticker.symbol %>  <br/>
+              Primary Exchange: <%= @ticker.primary_exchange %>  <br/> <br/>
+              Latest Price:  $ <%= @ticker.latest_price  %> <br/>
+              Previous Close:  $ <%= @ticker.previous_close  %> <br/>
+              Percentage Change:  <%= number_to_human(@ticker.change_percent) %> %<br/>
+              YTD Change:  <%= @ticker.ytd_change %> %<br/>
+              Market Cap: $ <%= number_to_human( @ticker.market_cap) %>  <br/>
+              PE Ratio: <%= @ticker.pe_ratio %>  <br/>
+              52 Week High: $ <%= @ticker.week52_high %>  <br/>
+              52 Week Low: $ <%= @ticker.week52_low %>  <br/>
+              Average Total Volume: <%= number_to_human(@ticker.avg_total_volume) %>  <br/>
+              Calculation Price: <%= @ticker.calculation_price %>  <br/>
+              Latest Volume: <%= number_to_human(@ticker.latest_volume) %>  <br/>
+
+            </div>
 
 
+
+        <% end %>
+
+ 
+ <br/> <br/>
 
 <%= link_to 'Edit', edit_stock_path(@stock) %> |
 <%= link_to 'Back', stocks_path %>

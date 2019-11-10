@@ -1,8 +1,8 @@
 # README
 
-This is Stock Market app that let's you look up stock quotes and financial information and save it to a database.
+The Stock Market app that let's you look up stock quotes and financial information and save it to a database.
 
-Uses Ruby on Rails with a database.
+Uses Ruby on Rails with sqlite database.
 
 
 ## Built With:
