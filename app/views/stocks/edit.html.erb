@@ -1,6 +1,10 @@
 <h1>Editing Stock</h1>
 
-<%= render 'form', stock: @stock %>
+    <div class="jumbotron">
 
-<%= link_to 'Show', @stock, class: "btn btn-outline-secondary" %> 
-<%= link_to 'Back', stocks_path, class: "btn btn-outline-secondary" %>
+        <%= render 'form', stock: @stock %>
+
+        <%= link_to 'Show', @stock, class: "btn btn-outline-secondary" %> 
+        <%= link_to '<< Back', stocks_path, class: "btn btn-outline-secondary" %>
+
+    </div>

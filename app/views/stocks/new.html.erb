@@ -1,5 +1,9 @@
 <h1>New Stock</h1>
 
-<%= render 'form', stock: @stock, class: "btn btn-outline-secondary" %>
+    <div class="jumbotron">
 
-<%= link_to '<< Back', stocks_path, class: "btn btn-outline-secondary" %>
+        <%= render 'form', stock: @stock, class: "btn btn-outline-secondary" %>
+
+        <%= link_to '<< Back', stocks_path, class: "btn btn-outline-secondary" %>
+
+    </div>

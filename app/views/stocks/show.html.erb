@@ -23,7 +23,7 @@
                                 Previous Close:  $ <%= @ticker.previous_close  %> <br/>
                                 Percentage Change:  <%= number_to_human(@ticker.change_percent) %> <br>
 
-                                YTD Change:  <%= @ticker.ytd_change %> <br/>
+                                YTD Change:  <%= number_to_human(@ticker.ytd_change) %> <br/>
                                 Market Cap: $ <%= number_to_human( @ticker.market_cap) %>  <br/>
                                 PE Ratio: <%= @ticker.pe_ratio %>  <br/>
                                 52 Week High: $ <%= @ticker.week52_high %>  <br/>
