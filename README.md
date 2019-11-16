@@ -2,7 +2,7 @@
 
 The Stock Market app that let's you look up stock quotes and financial information and save it to a database.
 
-Uses Ruby on Rails with sqlite database.
+Uses Ruby on Rails with PostgreSQL database.
 
 
 ## Built With:
@@ -12,7 +12,7 @@ Uses Ruby on Rails with sqlite database.
 * Rails version 6.0
 
 * CSS & Bootstrap- for styling
-* Database sqlite3 version 1.3
+* PostgreSQL version 1.1.4
 
 ## Installing:
 
