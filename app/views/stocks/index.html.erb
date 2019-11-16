@@ -17,30 +17,30 @@
     <% @stocks.each do |stock| %>
       <% if stock.user.id == current_user.id %>
 
-        <% if stock.ticker == "" %>%
-            <%= @ticker.company_name = "na" %>%
-            <%= @ticker.symbol = "na" %>%
-            <%= @ticker.latest_price = "na" %>%
-            <%= @ticker.market_cap = "na" %>%                                         
-        <% elsif stock.ticker %>%
-        <% begin %>%
-          <% @ticker =  StockQuote::Stock.quote(stock.ticker) %>%
-          <% rescue %>%
-        <%= @error = "error"  %>%
-            <%= @ticker.company_name = "N/A" %>%
-            <%= @ticker.symbol = "N/A" %>%
-            <%= @ticker.latest_price = "N/A" %>%
-            <%= @ticker.market_cap = "N/A" %>% 
-      <% end  %>%
+        <% if stock.ticker == "" %>
+            <%= @ticker.company_name = "na" %>
+            <%= @ticker.symbol = "na" %>
+            <%= @ticker.latest_price = "na" %>
+            <%= @ticker.market_cap = "na" %>                                         
+        <% elsif stock.ticker %>
+        <% begin %>
+          <% @ticker =  StockQuote::Stock.quote(stock.ticker) %>
+          <% rescue %>
+        <%= @error = "error"  %>
+            <%= @ticker.company_name = "N/A" %>
+            <%= @ticker.symbol = "N/A" %>
+            <%= @ticker.latest_price = "N/A" %>
+            <%= @ticker.market_cap = "N/A" %> 
+      <% end  %>
 
-         <% if !stock.ticker %>%
-            <%= @ticker.company_name = "n/a" %>%
-            <%= @ticker.symbol = "n/a" %>%
-            <%= @ticker.latest_price = "n/a" %>%
-            <%= @ticker.market_cap = "n/a" %>% 
+         <% if !stock.ticker %>
+            <%= @ticker.company_name = "n/a" %>
+            <%= @ticker.symbol = "n/a" %>
+            <%= @ticker.latest_price = "n/a" %>
+            <%= @ticker.market_cap = "n/a" %> 
          <% end %>
 
-    <% end  %>%
+    <% end  %>
 
 
           <tr>
@@ -59,4 +59,4 @@
 
 <br>
 
-<%= link_to 'New Stock', new_stock_path %>
+<%= link_to 'New Stock', new_stock_path, class: "btn btn-outline-secondary" %>
